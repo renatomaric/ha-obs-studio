@@ -75,7 +75,7 @@ async def test_config_flow_creates_entry(hass: HomeAssistant) -> None:
     result = await hass.config_entries.flow.async_configure(result["flow_id"], DATA)
 
     assert result["type"] is FlowResultType.CREATE_ENTRY
-    assert result["title"] == "OBS macOS"
+    assert result["title"] == "OBS"
     assert result["data"] == DATA
 
 

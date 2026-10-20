@@ -37,16 +37,13 @@ class OBSConfigFlow(ConfigFlow, domain=DOMAIN):
             )
             try:
                 await client.connect()
-                version = await client.call("GetVersion")
+                await client.call("GetVersion")
             except OBSAuthError:
                 errors["base"] = "invalid_auth"
             except OBSError:
                 errors["base"] = "cannot_connect"
             else:
-                return self.async_create_entry(
-                    title=f"OBS {version.get('platformDescription', user_input[CONF_HOST])}",
-                    data=user_input,
-                )
+                return self.async_create_entry(title="OBS", data=user_input)
             finally:
                 await client.disconnect()
 
