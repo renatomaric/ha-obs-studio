@@ -1,0 +1,12 @@
+{
+  "domain": "obs_studio",
+  "name": "OBS Studio",
+  "codeowners": ["@renatomaric"],
+  "config_flow": true,
+  "documentation": "https://github.com/renatomaric/ha-obs-studio",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/renatomaric/ha-obs-studio/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

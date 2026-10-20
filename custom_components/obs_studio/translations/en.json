@@ -1,0 +1,27 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "OBS Studio",
+        "description": "Enable the WebSocket server in OBS (Tools > WebSocket Server Settings).",
+        "data": {
+          "host": "Host",
+          "port": "Port",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to OBS. Is OBS running with the WebSocket server enabled?",
+      "invalid_auth": "Wrong WebSocket password."
+    },
+    "abort": {
+      "already_configured": "This OBS instance is already configured."
+    }
+  },
+  "entity": {
+    "select": {
+      "scene": { "name": "Scene" }
+    }
+  }
+}
